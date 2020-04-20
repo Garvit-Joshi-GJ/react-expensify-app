@@ -10,10 +10,10 @@ import {setTextFilter} from './actions/filters';
 import getVisibleExpenses from './selecters/expenses';
 const store = configureStore();
 
-const expenseOne=store.dispatch(addExpense({description:'Water Bill',amount:1000, createdAt:1000}));
-const expenseThree=store.dispatch(addExpense({description:'Rent',amount:100, createdAt:3000}));
+// const expenseOne=store.dispatch(addExpense({description:'Water Bill',amount:1000, createdAt:1000}));
+// const expenseThree=store.dispatch(addExpense({description:'Rent',amount:100, createdAt:3000}));
 
-const expenseTwo=store.dispatch(addExpense({description:'Gas Bill',amount:1010, createdAt:2000}));
+// const expenseTwo=store.dispatch(addExpense({description:'Gas Bill',amount:1010, createdAt:2000}));
 
 
 // store.subscribe(()=>{
@@ -21,7 +21,7 @@ const expenseTwo=store.dispatch(addExpense({description:'Gas Bill',amount:1010, 
 //     const VisibleExpenses = getVisibleExpenses(state.expenses,state.filters)
 //     console.log(VisibleExpenses);
 // });
-console.log(getVisibleExpenses(store.getState().expenses,store.getState().filters));
+// console.log(getVisibleExpenses(store.getState().expenses,store.getState().filters));
 
  const jsx = (
      <Provider store = {store}>
