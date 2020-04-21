@@ -10,3 +10,5 @@ git init
  # Heroku Commands
  heroku login
  heroku create App_NAME
+git push heroku master
+heroku open
