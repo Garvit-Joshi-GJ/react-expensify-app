@@ -5,6 +5,7 @@ git init
  git add filenamePath  -->  // git add.
  git commit    --> git commit -m "MESSAGE" 
  git log
+ git commit -am "setup Dev Dependencies and dist folder"  // git commit -a -m "setup Dev Dependencies and dist folder"
 
 
  # Heroku Commands
