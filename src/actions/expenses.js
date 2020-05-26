@@ -46,3 +46,34 @@ return {
         updates
 }
 }
+
+// SET_EXPENSES
+
+export const setExpenses=(expenses)=>({
+type: 'SET_EXPENSES',
+expenses
+});
+
+// export const startSetExpenses;
+    // 1. Fetch All expenses data once 
+    // 2. Parse that data into an array
+    // 3. dispatch SET_EXPENSES
+  
+export const startSetExpenses=()=>{
+    return (dispatch)=>{
+        return  database.ref('expenses').once('value').then((snapshot)=>{
+        const expenses =[];
+        snapshot.forEach((childSnapshot) => {
+       
+          expenses.push({
+            id:childSnapshot.key,
+            ...childSnapshot.val()
+          });
+         
+        });
+
+        dispatch(setExpenses(expenses));
+    });
+}
+   
+};
