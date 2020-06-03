@@ -9,6 +9,7 @@ import HelpPage from '../components/HelpPage';
 import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 export const history = createHistory();
  //if we use BrowserRouter tag then we donot pass history it is automatically managed by React- rounter but as we need to implemet 
@@ -17,11 +18,10 @@ const AppRouter=()=>(
     <Router history={history}>
     <div>
     <Switch>
-    <Route path='/' component={LoginPage} exact={true}/>
+    <PublicRoute path='/' component={LoginPage} exact={true}/>
     <PrivateRoute path='/dashboard' component={ExpenseDashboardPage} exact={true}/>
     <PrivateRoute path='/create' component={AddExpensePage} />
     <PrivateRoute path='/edit/:id' component={EditExpensePage} />
-    <Route path='/help' component={HelpPage} />
     <Route component={NotFoundPage} exact={true}/>
     
     </Switch>
@@ -33,3 +33,7 @@ const AppRouter=()=>(
 
 
 export default AppRouter;
+
+
+
+//    <Route path='/help' component={HelpPage} />
