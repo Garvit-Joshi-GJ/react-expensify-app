@@ -1,0 +1,25 @@
+.text-input{
+border : 1px solid #cacccd;
+height: 50px;
+font-size: $font-size-large;
+font-weight:300 ;
+padding: $s-size;
+}
+
+
+// NOTE: Actually we can implemen the extend functionality in three types
+//1. by adding the new class name with a coma with old class name eg : .classA , classB { ... }
+//2. by updating the new class with old class name 
+    //  classA{....}
+    // classA--classB{....}
+    // now class B will have all properties of classA
+// using extend keyword
+.select{
+    @extend .text-input;  
+}
+
+
+.textarea{
+    @extend .text-input;
+    height:10rem;
+}

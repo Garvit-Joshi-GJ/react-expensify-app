@@ -9,6 +9,7 @@ import {startSetExpenses} from './actions/expenses';
 import {login,logout} from './actions/auth';
 import getVisibleExpenses from './selecters/expenses';
 import {firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 const store = configureStore();
 
 //  const expenseOne=store.dispatch(addExpense({description:'Water Bill',amount:1000, createdAt:moment()}));
@@ -39,7 +40,7 @@ const store = configureStore();
         }
     }
 
- ReactDOM.render(<p>Loading....!</p>,document.getElementById('app'));
+ ReactDOM.render(<LoadingPage/>,document.getElementById('app'));
 
  firebase.auth().onAuthStateChanged((user)=>{
     if(user){

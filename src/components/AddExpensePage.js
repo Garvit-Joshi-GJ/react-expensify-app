@@ -7,9 +7,16 @@ const AddExpensePage=(props)=>(
 
 
     <div>
-    <h1>
+    <div className='page-header'>
+    <div className='content-container'>
+    <h1 className ='page-header-title'>
     Add Expense
     </h1>
+   
+    </div>
+    </div>
+    
+    <div className='content-container'>
     <ExpenseForm 
     onSubmit={(expense)=>{
     props.dispatch(startAddExpense(expense));
@@ -17,6 +24,7 @@ const AddExpensePage=(props)=>(
     }
 }
     />
+    </div>
     </div>
 );
 
