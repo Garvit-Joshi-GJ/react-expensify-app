@@ -20,6 +20,7 @@ export const sortByAmount= ()=>{
 }
 //SET_START_DATE
 export const setStartDate=(startDate)=>{
+    console.log('inside set start date'+startDate);
 return{
     type:'SET_START_DATE',
     startDate

@@ -9,6 +9,7 @@ const filterReducerDefaultState={
 export default (state=filterReducerDefaultState,action)=>{
        switch(action.type){
            case 'SET_TEXT_FILTER':
+               console.log('value of text in reducer'+action.text)
            return{
                ...state,
              text:action.text
@@ -24,14 +25,15 @@ export default (state=filterReducerDefaultState,action)=>{
                    sortBy:'amount'
                }
            case 'SET_START_DATE':
+               console.log('filters reducers..'+action.date);
                return{
                    ...state,
-                   startDate:action.date
+                   startDate:action.startDate
                }
                case 'SET_END_DATE':
                    return{
                        ...state,
-                       endDate:action.date
+                       endDate:action.endDate
                    }
            default:
                return state;
