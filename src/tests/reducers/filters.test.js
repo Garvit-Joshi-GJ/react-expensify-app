@@ -42,18 +42,18 @@ test('should steup text filter',()=>{
 });
 
 test('should steup START date filter',()=>{
-    const date=moment();
-    const state = filtersReducers(undefined,{type:'SET_START_DATE',date});
+    const startDate=moment();
+    const state = filtersReducers(undefined,{type:'SET_START_DATE',startDate});
     expect(state.startDate).toEqual(
-        date
+        startDate
     );
 });
 
 test('should steup END date filter',()=>{
-    const date=moment().add(4,'day');
-    const state = filtersReducers(undefined,{type:'SET_END_DATE',date});
+    const endDate=moment().add(4,'day');
+    const state = filtersReducers(undefined,{type:'SET_END_DATE',endDate});
     expect(state.endDate).toEqual(
-        date
+        endDate
     );
 });
 

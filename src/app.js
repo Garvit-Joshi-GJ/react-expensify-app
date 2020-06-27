@@ -43,8 +43,9 @@ const store = configureStore();
  ReactDOM.render(<LoadingPage/>,document.getElementById('app'));
 
  firebase.auth().onAuthStateChanged((user)=>{
+     console.log("app auth state changed"+JSON.stringify(user));
     if(user){
-        store.dispatch(login(user.uid));
+        store.dispatch(login(user.uid,user.displayName,user.photoURL));
         store.dispatch(startSetExpenses()).then(()=>{
                 renderApp();
                 if(history.location.pathname==='/'){

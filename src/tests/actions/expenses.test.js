@@ -31,7 +31,6 @@ expect(action).toEqual({
     id: '123abc'                            // toBe => ===
                                             // toEqual => not compares the type, just compares normally        
 });
-
 });
 
 test('SHould setUp remove Expense from Fire base ',(done)=>{
